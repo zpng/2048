@@ -1,50 +1,70 @@
-# React + TypeScript + Vite
+# 双人2048游戏
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+这是一个有趣的双人2048游戏，两位玩家可以在同一个屏幕上同时进行游戏，互相竞争获得更高的分数。
 
-Currently, two official plugins are available:
+## 游戏规则
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 每个玩家有独立的4x4游戏面板
+- 相同数字的方块在碰撞时会合并，数值翻倍
+- 每次移动后，会在空白位置随机生成一个2或4
+- 当无法继续移动时游戏结束
+- 获得更高分数的玩家获胜
 
-## Expanding the ESLint configuration
+## 操作说明
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 玩家1（左侧）
+使用WASD键控制：
+- W：向下移动
+- S：向上移动
+- A：向左移动
+- D：向右移动
 
-- Configure the top-level `parserOptions` property like this:
+### 玩家2（右侧）
+使用方向键控制：
+- ↑：向下移动
+- ↓：向上移动
+- ←：向左移动
+- →：向右移动
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 游戏界面
+
+![游戏界面截图](https://github.com/bytedance/2048/raw/main/screenshots/gameplay.png)
+
+## 特色功能
+
+- 双人同屏对战
+- 独立的计分系统
+- 清晰的操作提示
+- 流畅的动画效果
+- 美观的界面设计
+
+## 技术栈
+
+- React
+- TypeScript
+- Vite
+- CSS3
+
+## 开发与运行
+
+```bash
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run dev
+
+# 构建生产版本
+npm run build
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 浏览器支持
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Chrome
+- Firefox
+- Safari
+- Edge
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 贡献
+
+欢迎提交Issue和Pull Request来帮助改进这个游戏！
