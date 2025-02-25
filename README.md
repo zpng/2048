@@ -28,7 +28,7 @@
 
 ## 游戏界面
 
-![游戏界面截图](/screenshots/gameplay.png)
+![游戏界面截图](/public/screenshots/gameplay.png)
 
 ## 特色功能
 
